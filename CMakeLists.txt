@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( Dispatcher )
+include_directories( include )
+set(SOURCES src/EnableFlashMessage.cpp src/TiltMotorAngleMessage.cpp)
+add_executable( Dispatcher src/main.cpp ${SOURCES})
