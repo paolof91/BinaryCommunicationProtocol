@@ -1,11 +1,12 @@
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 class Message
 {
 public:
     Message() { };
 
-    virtual void std::serialize(uint8_t* data) = 0;
-    virtual void deserialize(uint8_t* data) = 0;
-}
+    virtual void serialize(uint8_t* data) { };
+    virtual void deserialize(uint8_t* data) { };
+};

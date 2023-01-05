@@ -7,6 +7,6 @@ public:
 
     float data;
 
-    void std::serialize(uint8_t* data) override;
+    void serialize(uint8_t* data) override;
     void deserialize(uint8_t* data) override;
-}
+};

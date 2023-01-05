@@ -1,6 +1,6 @@
 #include "TiltMotorAngleMessage.h"
 
-TiltMotorAngleMessage::TiltMotorAngleMessage(bool msgData)
+TiltMotorAngleMessage::TiltMotorAngleMessage(float msgData)
 {
     data = msgData;
 }
