@@ -7,13 +7,13 @@ class EnableFlashMessage : public Message
 public:
     EnableFlashMessage() { };
 
-    float data;
+    bool data;
 
-    void serialize(uint8_t* data) override {
-        memcpy(data, (void*)this, sizeof(EnableFlashMessage));
+    void serialize(uint8_t* dataBytes) override {
+        memcpy(dataBytes, (void*)&data, sizeof(bool));
     }
 
-    void deserialize(uint8_t* data) override {
-        memcpy((void*)this, data, sizeof(EnableFlashMessage));
+    void deserialize(uint8_t* dataBytes) override {
+        memcpy((void*)&data, dataBytes, sizeof(bool));
     }
 };

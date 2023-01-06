@@ -28,10 +28,6 @@ int main()
     dispatcherMap.at(mti)->dispatch(messageBytes);
 
     // Show that the message indeed appears here
-    std::cout << tiltQueue.front().data << std::endl;
+    std::cout << "Tilt queue: " << tiltQueue.front().data << std::endl;
 
-
-    
-
-    
 }

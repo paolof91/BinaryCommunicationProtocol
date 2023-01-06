@@ -1,5 +1,6 @@
 #pragma once
 
+#include <iostream>
 #include "Message.h"
 
 class TiltMotorAngleMessage : public Message
@@ -9,11 +10,11 @@ public:
 
     float data;
 
-    void serialize(uint8_t* data) override {
-        memcpy(data, (void*)this, sizeof(TiltMotorAngleMessage));
+    void serialize(uint8_t* dataBytes) override {
+        memcpy(dataBytes, (void*)&data, sizeof(float));
     }
 
-    void deserialize(uint8_t* data) override {
-        memcpy((void*)this, data, sizeof(TiltMotorAngleMessage));
+    void deserialize(uint8_t* dataBytes) override {
+        memcpy((void*)&data, dataBytes, sizeof(float));
     }
 };
