@@ -1,12 +1,19 @@
+#pragma once
+
 #include "Message.h"
 
 class EnableFlashMessage : public Message
 {
 public:
-    EnableFlashMessage(bool data);
+    EnableFlashMessage() { };
 
-    bool data;
+    float data;
 
-    void serialize(uint8_t* data) override;
-    void deserialize(uint8_t* data) override;
+    void serialize(uint8_t* data) override {
+        memcpy(data, (void*)this, sizeof(EnableFlashMessage));
+    }
+
+    void deserialize(uint8_t* data) override {
+        memcpy((void*)this, data, sizeof(EnableFlashMessage));
+    }
 };
