@@ -2,8 +2,7 @@
 #include <queue>
 #include <map>
 
-#include "TiltMotorAngleMessage.h"
-#include "EnableFlashMessage.h"
+#include "Messages.h"
 #include "Dispatcher.h"
 #include "CommunicationProtocol.h"
 
