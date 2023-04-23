@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 project( Dispatcher )
 
-find_package(PythonLibs 3.8 REQUIRED)
-find_package(Boost COMPONENTS python38 REQUIRED)
+find_package(PythonLibs 3.10 REQUIRED)
+find_package(Boost COMPONENTS python310 REQUIRED)
 
 include_directories( include 
                      ${Boost_INCLUDE_DIRS}
